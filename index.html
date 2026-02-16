@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bangla News + Islamic</title>
+<title>বাংলা বার্তা - প্রিমিয়াম</title>
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -11,42 +11,49 @@
 
 <header>
   <div class="logo">বাংলা বার্তা</div>
-  <div class="menu">☰</div>
+  <button id="darkToggle">🌙</button>
 </header>
 
 <nav class="menu-bar">
-  <a href="#">হোম</a>
-  <a href="#">নিউজ</a>
-  <a href="#">ইসলামিক</a>
-  <a href="#">প্রোফাইল</a>
+  <a href="#home" class="nav-link active">হোম</a>
+  <a href="#news" class="nav-link">নিউজ</a>
+  <a href="#islamic" class="nav-link">ইসলামিক</a>
+  <a href="#profile" class="nav-link">প্রোফাইল</a>
 </nav>
 
-<section class="hero">
-  <div class="hero-card">
-    <h2>আজকের ব্রেকিং নিউজ</h2>
-    <p>সিলেটে আন্দোলন ও গুরুত্বপূর্ণ খবর</p>
-  </div>
-</section>
+<main>
+  <section id="home" class="page active">
+    <div class="hero-card">
+      <h2>আজকের ব্রেকিং নিউজ</h2>
+      <p>সিলেটে আন্দোলন ও গুরুত্বপূর্ণ খবর</p>
+    </div>
+  </section>
 
-<section class="section">
-  <h3>📰 নিউজ আপডেট</h3>
-  <div class="card">ঢাকা: গুরুত্বপূর্ণ রাজনৈতিক সংবাদ</div>
-  <div class="card">চট্টগ্রাম: লোকাল ইভেন্ট আপডেট</div>
-</section>
+  <section id="news" class="page">
+    <h3>📰 নিউজ আপডেট</h3>
+    <div class="card">ঢাকা: গুরুত্বপূর্ণ রাজনৈতিক সংবাদ</div>
+    <div class="card">চট্টগ্রাম: লোকাল ইভেন্ট আপডেট</div>
+  </section>
 
-<section class="section">
-  <h3>🕌 ইসলামিক কনটেন্ট</h3>
-  <div class="card">📖 কুরআন তিলাওয়াত</div>
-  <div class="card">🕋 হাদিস</div>
-  <div class="card">🤲 দোয়া সমূহ</div>
-</section>
+  <section id="islamic" class="page">
+    <h3>🕌 ইসলামিক কনটেন্ট</h3>
+    <div class="card">📖 কুরআন তিলাওয়াত</div>
+    <div class="card">🕋 হাদিস</div>
+    <div class="card">🤲 দোয়া সমূহ</div>
 
-<div class="bottom-nav">
-  <div class="nav-item">🏠<br>হোম</div>
-  <div class="nav-item">📰<br>নিউজ</div>
-  <div class="nav-item">🕌<br>ইসলামিক</div>
-  <div class="nav-item">👤<br>প্রোফাইল</div>
-</div>
+    <h3>🕌 নামাজের সময়</h3>
+    <div id="prayerTimes">Loading...</div>
+
+    <h3>🧭 কিবলা দিক</h3>
+    <div id="compass">🧭</div>
+    <p id="qiblaDegree">ডিগ্রি হিসাব হচ্ছে...</p>
+  </section>
+
+  <section id="profile" class="page">
+    <h3>প্রোফাইল</h3>
+    <p>এখানে ব্যবহারকারী তথ্য দেখানো হবে।</p>
+  </section>
+</main>
 
 <script src="app.js"></script>
 </body>
