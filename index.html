@@ -1,60 +1,73 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>বাংলা বার্তা - প্রিমিয়াম</title>
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DristiBD</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-  <div class="logo">বাংলা বার্তা</div>
-  <button id="darkToggle">🌙</button>
+  <h1>DristiBD</h1>
 </header>
 
-<nav class="menu-bar">
-  <a href="#home" class="nav-link active">হোম</a>
-  <a href="#news" class="nav-link">নিউজ</a>
-  <a href="#islamic" class="nav-link">ইসলামিক</a>
-  <a href="#profile" class="nav-link">প্রোফাইল</a>
-</nav>
-
 <main>
+
+  <!-- HOME -->
   <section id="home" class="page active">
-    <div class="hero-card">
-      <h2>আজকের ব্রেকিং নিউজ</h2>
-      <p>সিলেটে আন্দোলন ও গুরুত্বপূর্ণ খবর</p>
+    <h2>স্বাগতম</h2>
+    <p>নিউজ + ইসলামিক কনটেন্ট একসাথে</p>
+  </section>
+
+  <!-- NEWS -->
+  <section id="news" class="page">
+    <h2>জেলা ভিত্তিক নিউজ</h2>
+
+    <select id="districtSelect">
+      <option value="">জেলা নির্বাচন করুন</option>
+      <option value="dhaka">ঢাকা</option>
+      <option value="chittagong">চট্টগ্রাম</option>
+      <option value="rajshahi">রাজশাহী</option>
+    </select>
+
+    <div id="newsContainer"></div>
+  </section>
+
+  <!-- ISLAMIC -->
+  <section id="islamic" class="page">
+    <h2>ইসলামিক বিভাগ</h2>
+
+    <div class="grid">
+      <a href="quran.html" class="card">📖 কুরআন</a>
+      <a href="hadith.html" class="card">📚 হাদিস</a>
+      <a href="dua.html" class="card">🤲 দোয়া</a>
+      <a href="prayer.html" class="card">🕌 নামাজ</a>
     </div>
   </section>
 
-  <section id="news" class="page">
-    <h3>📰 নিউজ আপডেট</h3>
-    <div class="card">ঢাকা: গুরুত্বপূর্ণ রাজনৈতিক সংবাদ</div>
-    <div class="card">চট্টগ্রাম: লোকাল ইভেন্ট আপডেট</div>
-  </section>
-
-  <section id="islamic" class="page">
-    <h3>🕌 ইসলামিক কনটেন্ট</h3>
-    <div class="card">📖 কুরআন তিলাওয়াত</div>
-    <div class="card">🕋 হাদিস</div>
-    <div class="card">🤲 দোয়া সমূহ</div>
-
-    <h3>🕌 নামাজের সময়</h3>
-    <div id="prayerTimes">Loading...</div>
-
-    <h3>🧭 কিবলা দিক</h3>
-    <div id="compass">🧭</div>
-    <p id="qiblaDegree">ডিগ্রি হিসাব হচ্ছে...</p>
-  </section>
-
+  <!-- PROFILE -->
   <section id="profile" class="page">
-    <h3>প্রোফাইল</h3>
-    <p>এখানে ব্যবহারকারী তথ্য দেখানো হবে।</p>
+    <h2>প্রোফাইল</h2>
+
+    <div class="card">
+      <label class="switch-label">
+        🌙 ডার্ক মোড
+        <input type="checkbox" id="darkToggle">
+      </label>
+    </div>
   </section>
+
 </main>
 
-<script src="app.js"></script>
+<!-- BOTTOM NAV -->
+<nav class="bottom-nav">
+  <button onclick="showPage('home')">হোম</button>
+  <button onclick="showPage('news')">নিউজ</button>
+  <button onclick="showPage('islamic')">ইসলামিক</button>
+  <button onclick="showPage('profile')">প্রোফাইল</button>
+</nav>
+
+<script src="script.js"></script>
 </body>
 </html>

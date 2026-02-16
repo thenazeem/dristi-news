@@ -1,29 +1,102 @@
-:root{
-  --primary:#0B5E3C;
-  --gold:#C8A951;
-  --bg:#F8F6F0;
-  --card:rgba(255,255,255,0.6);
-  --text:#222;
+:root {
+  --bg: #f5f7fa;
+  --text: #1a1a1a;
+  --card: #ffffff;
+  --primary: #0066ff;
+  --nav: #ffffff;
+  --border: #e5e7eb;
 }
-body.dark{
-  --bg:#0f1a17;
-  --card:rgba(255,255,255,0.05);
-  --text:#eee;
+
+body.dark {
+  --bg: #0f172a;
+  --text: #f1f5f9;
+  --card: #1e293b;
+  --primary: #38bdf8;
+  --nav: #1e293b;
+  --border: #334155;
 }
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Noto Sans Bengali', sans-serif;}
-body{background:var(--bg);color:var(--text);transition:0.3s;}
-header{display:flex;justify-content:space-between;padding:15px;align-items:center;background:white;box-shadow:0 2px 8px rgba(0,0,0,0.05);}
-.logo{color:var(--primary);font-weight:700;font-size:20px;}
-button#darkToggle{background:var(--primary);color:white;border:none;padding:8px 12px;border-radius:8px;cursor:pointer;}
-.menu-bar{display:flex;justify-content:space-around;background:var(--primary);padding:10px 0;}
-.menu-bar a{color:white;text-decoration:none;font-weight:600;}
-.menu-bar a.active{text-decoration:underline;}
-main{padding:15px;}
-.page{display:none;}
-.page.active{display:block;}
-.hero-card{background:var(--card);padding:20px;border-radius:15px;border:2px solid var(--gold);text-align:center;margin-bottom:15px;}
-.card{background:white;padding:15px;margin-bottom:10px;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,0.1);cursor:pointer;transition:0.3s;}
-.card:hover{transform:translateY(-3px);}
-#prayerTimes{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:10px;}
-.prayer-card{background:var(--card);padding:12px;border-radius:12px;text-align:center;}
-#compass{text-align:center;font-size:50px;transition:transform 0.5s ease;}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+header {
+  text-align: center;
+  padding: 15px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.page {
+  display: none;
+  padding: 20px;
+  padding-bottom: 90px;
+}
+
+.page.active {
+  display: block;
+}
+
+.card {
+  background: var(--card);
+  padding: 15px;
+  border-radius: 14px;
+  margin-top: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.grid a {
+  text-decoration: none;
+  color: var(--text);
+  background: var(--card);
+  padding: 18px;
+  border-radius: 14px;
+  text-align: center;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.grid a:active {
+  transform: scale(0.96);
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  background: var(--nav);
+  border-top: 1px solid var(--border);
+}
+
+.bottom-nav button {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  background: transparent;
+  font-weight: bold;
+  color: var(--text);
+  transition: 0.2s;
+}
+
+.bottom-nav button.active {
+  color: var(--primary);
+}
