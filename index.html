@@ -8,44 +8,84 @@
 </head>
 <body>
 
-<header>
-  <h1>DristiBD</h1>
+<header class="header-bar">
+  <button class="back-btn" id="backBtn" style="display:none;">⬅</button>
+  <span id="pageTitle">DristiBD</span>
 </header>
 
 <main>
-
+  <!-- Home Section -->
   <section id="home" class="page active">
-    <h2>NAZEEM</h2>
-    <p>Welcome TO My World</p>
+    <h2>স্বাগতম</h2>
+    <p>নিউজ + ইসলামিক প্ল্যাটফর্ম</p>
   </section>
 
+  <!-- News Section -->
   <section id="news" class="page">
     <h2>জেলা ভিত্তিক নিউজ</h2>
-
     <select id="districtSelect">
       <option value="">জেলা নির্বাচন করুন</option>
       <option value="dhaka">ঢাকা</option>
       <option value="chittagong">চট্টগ্রাম</option>
       <option value="rajshahi">রাজশাহী</option>
     </select>
-
     <div id="newsContainer"></div>
   </section>
 
+  <!-- Islamic Section -->
   <section id="islamic" class="page">
     <h2>ইসলামিক বিভাগ</h2>
-
     <div class="grid">
-      <a href="quran.html">📖 কুরআন</a>
-      <a href="hadith.html">📚 হাদিস</a>
-      <a href="dua.html">🤲 দোয়া</a>
-      <a href="prayer.html">🕌 নামাজ</a>
+      <a href="#" data-subpage="quran">📖 কুরআন</a>
+      <a href="#" data-subpage="hadith">📚 হাদিস</a>
+      <a href="#" data-subpage="dua">🤲 দোয়া</a>
+      <a href="#" data-subpage="prayer">🕌 নামাজ</a>
     </div>
   </section>
 
+  <!-- Islamic Subpages -->
+  <section id="quran" class="page">
+    <h3>📖 কুরআন</h3>
+    <div class="card">
+      <p>সূরা ফাতিহা...</p>
+    </div>
+    <div class="card">
+      <p>সূরা ইখলাস...</p>
+    </div>
+  </section>
+
+  <section id="hadith" class="page">
+    <h3>📚 হাদিস</h3>
+    <div class="card">
+      <p>রাসূল (সা.) বলেছেন: "কাজের ফল নিয়তের উপর নির্ভরশীল।"</p>
+    </div>
+    <div class="card">
+      <p>রাসূল (সা.) বলেছেন: "সর্বোত্তম চরিত্রধারী ব্যক্তি উত্তম।"</p>
+    </div>
+  </section>
+
+  <section id="dua" class="page">
+    <h3>🤲 দোয়া</h3>
+    <div class="card">
+      <p>ঘুমানোর দোয়া: اللَّهُمَّ بِاسْمِكَ أَمُوتُ وَأَحْيَا</p>
+    </div>
+    <div class="card">
+      <p>খাওয়ার আগে: بِسْمِ اللَّهِ</p>
+    </div>
+  </section>
+
+  <section id="prayer" class="page">
+    <h3>🕌 নামাজ</h3>
+    <div class="card">ফজর: ২ রাকাত ফরজ</div>
+    <div class="card">যোহর: ৪ রাকাত ফরজ</div>
+    <div class="card">আসর: ৪ রাকাত ফরজ</div>
+    <div class="card">মাগরিব: ৩ রাকাত ফরজ</div>
+    <div class="card">এশা: ৪ রাকাত ফরজ</div>
+  </section>
+
+  <!-- Profile Section -->
   <section id="profile" class="page">
     <h2>প্রোফাইল</h2>
-
     <div class="card">
       <label>
         🌙 ডার্ক মোড
@@ -56,11 +96,12 @@
 
 </main>
 
+<!-- Bottom Navbar -->
 <nav class="bottom-nav">
-  <button onclick="showPage('home')">হোম</button>
-  <button onclick="showPage('news')">নিউজ</button>
-  <button onclick="showPage('islamic')">ইসলামিক</button>
-  <button onclick="showPage('profile')">প্রোফাইল</button>
+  <button data-page="home">হোম</button>
+  <button data-page="news">নিউজ</button>
+  <button data-page="islamic">ইসলামিক</button>
+  <button data-page="profile">প্রোফাইল</button>
 </nav>
 
 <script src="script.js"></script>
