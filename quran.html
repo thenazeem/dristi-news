@@ -2,7 +2,7 @@
 <html lang="bn">
 <head>
   <meta charset="UTF-8">
-  <title>কুরআন - DristiBD</title>
+  <title>কুরআন</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,23 +12,24 @@
 </header>
 
 <main class="page active">
-
   <div class="card">
-    <h3>সূরা আল-ফাতিহা</h3>
-    <p>بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
-    <p>সমস্ত প্রশংসা আল্লাহর জন্য...</p>
+    <p>সূরা ফাতিহা...</p>
   </div>
-
-  <div class="card">
-    <h3>সূরা ইখলাস</h3>
-    <p>قُلْ هُوَ اللَّهُ أَحَدٌ</p>
-    <p>বলুন, তিনি আল্লাহ, একক...</p>
-  </div>
-
-  <br>
-  <a href="index.html" class="card" style="text-align:center;">⬅ হোমে ফিরুন</a>
-
 </main>
+
+<nav class="bottom-nav">
+  <button onclick="goHome('home')">হোম</button>
+  <button onclick="goHome('news')">নিউজ</button>
+  <button onclick="goHome('islamic')">ইসলামিক</button>
+  <button onclick="goHome('profile')">প্রোফাইল</button>
+</nav>
+
+<script>
+function goHome(section) {
+  localStorage.setItem("lastPage", section);
+  window.location.href = "index.html";
+}
+</script>
 
 <script src="script.js"></script>
 </body>

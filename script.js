@@ -3,15 +3,18 @@ function showPage(id) {
     page.classList.remove("active");
   });
 
-  document.querySelectorAll(".bottom-nav button").forEach(btn => {
-    btn.classList.remove("active");
-  });
-
   document.getElementById(id).classList.add("active");
-  event.target.classList.add("active");
+  localStorage.setItem("lastPage", id);
 }
 
-// News
+window.addEventListener("DOMContentLoaded", function () {
+  const last = localStorage.getItem("lastPage");
+  if (last && document.getElementById(last)) {
+    showPage(last);
+  }
+});
+
+// News Data
 const newsData = {
   dhaka: ["ঢাকার প্রধান খবর ১", "ঢাকার প্রধান খবর ২"],
   chittagong: ["চট্টগ্রামের খবর ১", "চট্টগ্রামের খবর ২"],

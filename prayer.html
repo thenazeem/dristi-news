@@ -2,46 +2,34 @@
 <html lang="bn">
 <head>
   <meta charset="UTF-8">
-  <title>নামাজ - DristiBD</title>
+  <title>কুরআন</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-  <h1>🕌 নামাজ</h1>
+  <h1>📖 কুরআন</h1>
 </header>
 
 <main class="page active">
-
   <div class="card">
-    <h3>ফজর</h3>
-    <p>২ রাকাত ফরজ</p>
+    <p>সূরা ফাতিহা...</p>
   </div>
-
-  <div class="card">
-    <h3>যোহর</h3>
-    <p>৪ রাকাত ফরজ</p>
-  </div>
-
-  <div class="card">
-    <h3>আসর</h3>
-    <p>৪ রাকাত ফরজ</p>
-  </div>
-
-  <div class="card">
-    <h3>মাগরিব</h3>
-    <p>৩ রাকাত ফরজ</p>
-  </div>
-
-  <div class="card">
-    <h3>এশা</h3>
-    <p>৪ রাকাত ফরজ</p>
-  </div>
-
-  <br>
-  <a href="index.html" class="card" style="text-align:center;">⬅ হোমে ফিরুন</a>
-
 </main>
+
+<nav class="bottom-nav">
+  <button onclick="goHome('home')">হোম</button>
+  <button onclick="goHome('news')">নিউজ</button>
+  <button onclick="goHome('islamic')">ইসলামিক</button>
+  <button onclick="goHome('profile')">প্রোফাইল</button>
+</nav>
+
+<script>
+function goHome(section) {
+  localStorage.setItem("lastPage", section);
+  window.location.href = "index.html";
+}
+</script>
 
 <script src="script.js"></script>
 </body>

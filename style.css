@@ -94,9 +94,4 @@ select {
   background: transparent;
   font-weight: bold;
   color: var(--text);
-  transition: 0.2s;
-}
-
-.bottom-nav button.active {
-  color: var(--primary);
 }

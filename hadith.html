@@ -2,31 +2,34 @@
 <html lang="bn">
 <head>
   <meta charset="UTF-8">
-  <title>হাদিস - DristiBD</title>
+  <title>কুরআন</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-  <h1>📚 হাদিস</h1>
+  <h1>📖 কুরআন</h1>
 </header>
 
 <main class="page active">
-
   <div class="card">
-    <p>রাসূল (সা.) বলেছেন:  
-    "কাজের ফল নিয়তের উপর নির্ভরশীল।"</p>
+    <p>সূরা ফাতিহা...</p>
   </div>
-
-  <div class="card">
-    <p>রাসূল (সা.) বলেছেন:  
-    "তোমাদের মধ্যে সে ব্যক্তি উত্তম, যার চরিত্র উত্তম।"</p>
-  </div>
-
-  <br>
-  <a href="index.html" class="card" style="text-align:center;">⬅ হোমে ফিরুন</a>
-
 </main>
+
+<nav class="bottom-nav">
+  <button onclick="goHome('home')">হোম</button>
+  <button onclick="goHome('news')">নিউজ</button>
+  <button onclick="goHome('islamic')">ইসলামিক</button>
+  <button onclick="goHome('profile')">প্রোফাইল</button>
+</nav>
+
+<script>
+function goHome(section) {
+  localStorage.setItem("lastPage", section);
+  window.location.href = "index.html";
+}
+</script>
 
 <script src="script.js"></script>
 </body>
